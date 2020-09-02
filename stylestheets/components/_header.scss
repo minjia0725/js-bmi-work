@@ -1,0 +1,147 @@
+.header{
+    &-title{
+        background-image: url(../stylestheets/images/BMICLogo.png);
+        width: 117px;
+        height: 117px;
+    }
+    &-form-custom{
+        background: rgba(255,255,255,0.18);
+        border: 2px solid $secondary;
+        border-radius: 10px;
+        &::-webkit-input-placeholder{
+            color: white;
+        }
+        &:focus{
+            outline: none
+        }
+    }
+    &-result{
+        position: relative;
+        text-align:center;
+        > a,h2{
+            //共同設定  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: .3s;
+            font-weight: 700;
+            font-size: $h4-font-size;
+            margin-bottom: 0;
+        }
+        > a{
+            width: 120px;
+            height: 120px;
+            background: $secondary;
+            text-decoration: none;
+            &:hover, &:focus{
+                box-shadow: 0 1px 6px 3px  rgba(255,195,49,0.64);
+            }
+            &:active{
+                background: #DEA921;
+                box-shadow: none;
+            }
+        }
+        h2{
+            width: 123px;
+            height: 123px;
+        }
+        &-light,&-normal,&-heavy,&-fat,&-veryfat{
+            //共同設定
+            h2{ 
+                font-size:2rem;
+                position: relative;
+                flex-direction: column;
+                background: transparent;
+                small{
+                    position:absolute;
+                    bottom: .5rem;
+                    font-size: 14px;
+                }
+                a{  
+                    position:absolute;
+                    right: 0;
+                    bottom: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    border:2px solid $primary ;
+                }
+            }
+            p{
+                font-size:2rem;
+                margin-bottom: 0;
+                padding-left: 1.125rem;
+                white-space:nowrap;
+            }
+        }
+        &-light{
+            h2{
+                color:$lightcolor;
+                border: 6px solid $lightcolor;
+                a{
+                    background: $lightcolor;
+                }
+            }
+            P{
+                color:$lightcolor ;
+            }
+        }
+        &-normal{
+            h2{
+                color:$normalcolor;
+                border: 6px solid $normalcolor;
+                a{
+                    background: $normalcolor;
+                }
+            }
+            p{
+                color:$normalcolor;
+            }
+        }
+        &-heavy{
+            h2{
+                color:$heavycolor;
+                border: 6px solid $heavycolor;
+                a{
+                    background: $heavycolor;
+                }
+            }
+            p{
+                color:$heavycolor;
+            }
+        }
+        &-fat{
+            h2{
+                color:$fatcolor;
+                border: 6px solid $fatcolor;
+                a{
+                    background: $fatcolor;
+                }
+            }
+            p{
+                color:$fatcolor;
+            }
+        }
+        &-veryfat{
+            h2{
+                color:$veryfatcolor;
+                border: 6px solid $veryfatcolor;
+                a{
+                    background: $veryfatcolor;
+                }
+            }
+            p{
+                color:$veryfatcolor;
+            }
+        }
+    }
+    &-back-icon{
+        padding:5.5px 8px;
+    }
+}
+
+

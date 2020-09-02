@@ -1,0 +1,40 @@
+.list{
+    &-class{
+        display: flex;
+        background: white;
+        padding: 10px 0;
+        white-space: nowrap;
+        font-size: 14px;
+        @include sm{
+            font-size: 20px;
+            padding: 21px 0;
+        }
+    }
+    &-light,&-normal,&-heavy,&-fat,&-veryfat{
+        border-left:7px solid ;
+    }
+    &-light{
+        border-color:$lightcolor;
+        box-shadow:inset -15px 0px  10px -12px $lightcolor;
+    }
+    &-normal{
+        border-color:$normalcolor;
+        box-shadow:inset -15px 0px  10px -12px $normalcolor;
+    }
+    &-heavy{
+        border-color:$heavycolor;
+        box-shadow:inset -15px 0px  10px -12px $heavycolor;
+    }
+    &-fat{
+        border-color:$fatcolor;
+        box-shadow:inset -15px 0px  10px -12px $fatcolor;
+       }
+    &-veryfat{
+        border-color:$veryfatcolor;
+        box-shadow:inset -15px 0px  10px -12px $veryfatcolor;
+    }
+    small{
+        font-size: 12px;
+        margin-right: 7px;
+    }
+}

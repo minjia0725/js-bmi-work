@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI計算</title>
+    <link rel="shortcut icon" href="stylestheets/images/BMICLogoblack.png">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <header class="bg-primary py-10 py-sm-16">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-md-3 col-lg-2 mb-5 mb-md-0">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="header-title bg-cover mb-0">
+                            <a href="index.html" class="d-block title-hidden h-100">BMI calculator</a>
+                        </h1>
+                    </div>
+                </div>
+                <div class="col col-md-4">
+                    <div class="form-group">
+                        <label for="bodyHeight"" class=" text-secondary h6">身高 cm</label>
+                        <input type="text" class="d-block w-100 py-2 pl-3 h5 header-form-custom bodyHeight"
+                            id="bodyHeight" placeholder="請輸入身高">
+                    </div>
+                    <div class="form-group">
+                        <label for="bodyWeight" class="text-secondary h6">體重 kg</label>
+                        <input type="text" class="d-block w-100 py-2 pl-3 h5 header-form-custom bodyWeight"
+                            id="bodyWeight" placeholder="請輸入體重">
+                    </div>
+                </div>
+                <div class="col-5 col-md-3 col-lg-2">
+                    <div class="d-flex  justify-content-center justify-content-sm-start  align-items-center">
+                        <div class="header-result" id="resultBtn">
+                            <a href="#">看結果</a>
+                        </div>
+                        <div class="header-result d-none d-sm-block" id="resultTxt">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <section>
+        <div class="container my-10 ">
+            <h2 class="h4 text-center mb-4 mb-sm-9">BMI 紀錄</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <ul class="list p-0">
+                    </ul>
+                    <div class="d-flex justify-content-center" id="delAll">
+                        <a href="#" class="text-decoration-none h2 mt-9 mb-0">清除所有紀錄</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-secondary">
+        <div class="text-center py-5">
+            <img src="stylestheets/images/BMICLogoblack.png" alt="" width="55">
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1bc324295b.js" crossorigin="anonymous"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>

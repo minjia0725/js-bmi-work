@@ -1,0 +1,71 @@
+//dom
+var height = document.querySelector('.bodyHeight');
+var weight = document.querySelector('.bodyWeight');
+var lookResult = document.querySelector('.lookResult');
+var resultBtn = document.querySelector('#resultBtn');
+var resultTxt = document.querySelector('#resultTxt');
+
+
+///BMI計算
+function countBMI(e) {
+    e.preventDefault();
+    ///內容空值判斷
+    if  (weight.value == '' && height.value == ''){
+        alert('請輸入內容')
+        return
+    } else if (weight.value == ''){
+        alert('請輸入體重')
+        return
+    } else if (height.value == '') {
+        alert('請輸入身高')
+        return
+    }
+    ////BMI判斷
+    var BMIdata = weight.value / Math.pow((height.value * 0.01), 2);
+    var strBtn = '<h2>' + BMIdata.toFixed(2) + '<br><small class="mb-0 h6">BMI</small><a href="#" class="back"><img src="/stylestheets/images/icons_loop.png"></a></h2>'
+    
+    if (BMIdata < 18.5) {
+        var strTxt = '<p>過輕</p>';
+        resultBtn.classList.add('header-result-light')
+        resultTxt.classList.add('header-result-light')
+        console.log('過輕')
+    } else if (BMIdata >= 18.5 && BMIdata < 25){
+        var strTxt = '<p>正常</p>';
+        resultBtn.classList.add('header-result-normal')
+        resultTxt.classList.add('header-result-normal')
+        console.log('正常')
+    } else if (BMIdata >= 25 && BMIdata < 30) {
+        var strTxt = '<p>過重</p>';
+        resultBtn.classList.add('header-result-heavy')
+        resultTxt.classList.add('header-result-heavy')
+        console.log('過重')
+    } else if (BMIdata >= 30 && BMIdata < 35) {
+        var strTxt = '<p>輕度肥胖</p>';
+        resultBtn.classList.add('header-result-fat')
+        resultTxt.classList.add('header-result-fat')
+        console.log('輕度肥胖')
+    } else if (BMIdata >= 35 && BMIdata < 40) {
+        var strTxt = '<p>中度肥胖</p>';
+        resultBtn.classList.add('header-result-fat')
+        resultTxt.classList.add('header-result-fat')
+        console.log('中度肥胖')
+    } else if (BMIdata >= 40) {
+        var strTxt = '<p>重度肥胖</p>';
+        resultBtn.classList.add('header-result-veryfat')
+        resultTxt.classList.add('header-result-veryfat')
+        console.log('重度肥胖')
+    }
+    resultBtn.innerHTML = strBtn;
+    resultTxt.innerHTML = strTxt;
+}
+
+
+///返回
+var back = document.querySelector('.back');
+function goBack(e) {
+    e.preventDefault();
+    alert("1234")
+}
+
+///監聽事件
+lookResult.addEventListener('click',countBMI);
